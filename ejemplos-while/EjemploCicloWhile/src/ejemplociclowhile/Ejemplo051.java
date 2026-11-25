@@ -31,16 +31,16 @@ public class Ejemplo051 {
         double calificacion;
         String nombre;
         String apellido;
-        String cadena_final = "Las notas del estudiante son\n";
+        String cadena_final = "REPORTE DE NOTAS\n";
         System.out.println("Ingrese el nombre del estudiante:");
         nombre = entrada.nextLine();
         System.out.println("Ingrese el apellido del estudiante:");
         apellido = entrada.nextLine();
+        cadena_final = String.format("%sEl nombre del Estudiante es:\n"
+                + "%s\nEl apellido del Estudiantes es:\n%s\n", cadena_final, nombre
+        ,apellido);
         System.out.println("Ingrese las notas de los estudiantes de su "
                 + "materia");
-        System.out.println("Ingrese las notas de los estudiantes de su "
-                + "materia");
-
         while (contador <= limite) {
             System.out.printf("Ingrese calificación "
                     + "número %d\n", contador);
@@ -48,13 +48,14 @@ public class Ejemplo051 {
             suma_total = suma_total + calificacion;
             // contador
             contador = contador + 1;
-            cadena_final= String.format("%s%.1f\n", cadena_final,
+            cadena_final= String.format("%sLas notas del estudiantes son:\n"
+                    + "%.1f\n", cadena_final,
                calificacion);
         }
         promedio_final = suma_total / limite;
         cadena_final= String.format("%sLa suma de notas es:\n"
                 + "%.1f\n", cadena_final,suma_total);
-        cadena_final= String.format("%sEl promedio final es:\n %.2f\n", cadena_final,
+        cadena_final= String.format("%sEl promedio final es:\n%.2f\n", cadena_final,
                 promedio_final);
         System.out.printf("%s\n", cadena_final);
 
