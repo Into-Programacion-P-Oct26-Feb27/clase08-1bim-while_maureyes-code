@@ -29,7 +29,7 @@ public class Ejemplo05 {
 
         double promedio_final;
         double calificacion;
-
+        String cadena_final = "Las notas del estudiante son\n";
         System.out.println("Ingrese las notas de los estudiantes de su "
                 + "materia");
 
@@ -40,11 +40,19 @@ public class Ejemplo05 {
             suma_total = suma_total + calificacion;
             // contador
             contador = contador + 1;
+            cadena_final= String.format("%s%.1f\n", cadena_final,
+               calificacion);
         }
-
         promedio_final = suma_total / limite;
+        cadena_final= String.format("%sLa suma de notas es:\n"
+                + "%.1f\n", cadena_final,suma_total);
+        cadena_final= String.format("%sEl promedio final es:\n %.2f\n", cadena_final,
+                promedio_final);
+        System.out.printf("%s\n", cadena_final);
 
-        System.out.printf("El promedio final es %f\n", promedio_final);
+        /*
+        LA CADENA FINAL EN EL WHILE ESTA ACOMULANDO VALORES PARA SER PRESENTADOS FINAL,
+        ACOMULANDO CUALQUIER TIPO DE DATO INGRESADO EJM CADENA, ENTERO, DOUBLE        */
 
     }
 }
