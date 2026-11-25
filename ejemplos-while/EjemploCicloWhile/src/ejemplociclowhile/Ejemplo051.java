@@ -34,11 +34,11 @@ public class Ejemplo051 {
         String cadena_final = "REPORTE DE NOTAS\n";
         System.out.println("Ingrese el nombre del estudiante:");
         nombre = entrada.nextLine();
+        cadena_final = String.format("%sEl nombre del Estudiante es:\n"
+                + "%s\n", cadena_final, nombre);
         System.out.println("Ingrese el apellido del estudiante:");
         apellido = entrada.nextLine();
-        cadena_final = String.format("%sEl nombre del Estudiante es:\n"
-                + "%s\nEl apellido del Estudiantes es:\n%s\n", cadena_final, nombre
-        ,apellido);
+        cadena_final = String.format("%sEl apellido del Estudiante es:\n", cadena_final, apellido);
         System.out.println("Ingrese las notas de los estudiantes de su "
                 + "materia");
         while (contador <= limite) {
